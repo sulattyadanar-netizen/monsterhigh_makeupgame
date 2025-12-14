@@ -49,7 +49,7 @@
     .options {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
       margin-top: 20px;
     }
 
@@ -78,8 +78,8 @@
     .next-btn {
       background-color: #FFFACD;
       color: #663399;
-      padding: 10px 24px; /* smaller padding */
-      font-size: 20px;    /* smaller font size */
+      padding: 10px 24px;
+      font-size: 20px;
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       opacity: 0.5;
@@ -115,32 +115,23 @@
       const nextButton = document.getElementById("next");
       const title = document.getElementById("pageTitle");
 
-      // Change main image, title, and next button link based on selected option
       if(optionNumber === 1) {
         mainImage.src = "clawdeen_b1.png";
-        title.innerText = "It looks clawsome! Next is eyeshadow!";
         nextButton.href = "b1.html";
-      } else if(optionNumber === 2) {
+      } 
+      else if(optionNumber === 2) {
         mainImage.src = "clawdeen_b2.png";
-        title.innerText = "It looks clawsome! Next is eyeshadow!";
         nextButton.href = "b2.html";
-      } else if(optionNumber === 3) {
-        mainImage.src = "clawdeen_b3.png";
-        title.innerText = "It looks clawsome! Next is eyeshadow!";
-        nextButton.href = "b3.html";
       }
 
-      // Highlight selected option and remove highlight from others
-      for(let i = 1; i <= 3; i++){
+      title.innerText = "It looks clawsome! Next is eyeshadow!";
+
+      // Highlight selected option
+      for(let i = 1; i <= 2; i++){
         const opt = document.getElementById("blushOption" + i);
-        if(i === optionNumber){
-          opt.classList.add("selected");
-        } else {
-          opt.classList.remove("selected");
-        }
+        opt.classList.toggle("selected", i === optionNumber);
       }
 
-      // Enable Next button
       nextButton.classList.add("active");
     }
   </script>
@@ -159,9 +150,6 @@
         </div>
         <div class="option" id="blushOption2" onclick="chooseBlush(2)">
           <img src="icon_blush2.png" alt="Blush 2">
-        </div>
-        <div class="option" id="blushOption3" onclick="chooseBlush(3)">
-          <img src="icon_blush3.png" alt="Blush 3">
         </div>
       </div>
     </div>
