@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Monster High Makeup Salon!</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('background.png');
+      background-position: center;
+      background-size: cover;
+      font-family: 'Bangers';
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFACD;
+      overflow: hidden;
+    }
+
+    .content {
+      background-color: rgba(102, 51, 153, 0.85);
+      width: 90%;
+      max-width: 900px;
+      height: 90vh;
+      max-height: 650px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    /* TITLE – SMALLER + MORE SPACE */
+    h1 {
+      font-size: 42px;        /* smaller */
+      text-align: center;
+      margin: 15px 10px 10px; /* space below */
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .image-area {
+      flex: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 0;
+    }
+
+    .character-image {
+      max-height: 100%;
+      max-width: 95%;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
+    }
+
+    .text-area {
+      flex: 0.6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    p {
+      background-color: #FFFACD;
+      color: #663399;
+      padding: 10px;
+      font-size: 18px;
+      margin: 0;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .start-btn {
+      background-color: #FFFACD;
+      color: #663399;
+      padding: 14px 34px;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .start-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="content">
+  <h1>Welcome to Monster High Makeup Salon!</h1>
+
+  <div class="image-area">
+    <img src="clawdeen.png" alt="Clawdeen" class="character-image">
+  </div>
+
+  <div class="text-area">
+    <p>
+      Help Clawdeen get ready for the most
+      <strong>FANGTASTIC</strong> party ever!
+    </p>
+
+    <a href="headband.html" class="start-btn">Start Makeover</a>
+  </div>
+</div>
+
+</body>
+</html>
