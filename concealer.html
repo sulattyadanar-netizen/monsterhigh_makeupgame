@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concealer – Monster High Makeup Salon</title>
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('bakcground.jpg');
+      background-position: center;
+      background-size: cover;
+      font-family: 'Bangers';
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFACD;
+    }
+
+    .content {
+      background-color: rgba(102, 51, 153, 0.85);
+      width: 90%;
+      max-width: 700px;
+      height: 90vh;
+      max-height: 650px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    /* Smaller title to make more space for image */
+    h1 {
+      font-size: 36px;  /* smaller than before */
+      margin: 0 0 20px 0;
+      font-weight: 500;
+    }
+
+    /* Image takes up roughly half the height of the container */
+    .main-image {
+      max-height: 100%;
+      max-width: 95%;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
+    }
+
+    /* Option box below the main image */
+    .option-box {
+      display: inline-block;
+      background-color: #FFFACD;
+      padding: 10px;
+      cursor: pointer;
+      border: 4px solid transparent;
+      transition: transform 0.2s, border 0.2s;
+      margin: 20px auto 0 auto; /* center horizontally */
+    }
+
+    .option-box img {
+      width: 90px;
+      display: block;
+    }
+
+    .option-box:hover {
+      transform: scale(1.05);
+    }
+
+    .option-box.selected {
+      border: 4px solid #663399;
+      border-radius: 10px;
+    }
+
+    /* Next button inside transparent box */
+    .next-btn {
+      background-color: #FFFACD;
+      color: #663399;
+      padding: 10px 24px; /* smaller padding */
+      font-size: 20px;    /* smaller font size */
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      opacity: 0.5;
+      pointer-events: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .next-btn.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .next-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+    }
+
+    /* Flex container for image and option box */
+    .flex-space {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+  <script>
+    function chooseHeadband() {
+      document.getElementById("clawdeen").src = "clawdeen concealer.png";
+      document.getElementById("headbandOption").classList.add("selected");
+      document.getElementById("pageTitle").innerText = "Great! Now lets add blush!";
+      document.getElementById("next").classList.add("active");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="content">
+    <h1 id="pageTitle">Lets cover up those dark circles!</h1>
+
+    <div class="flex-space">
+      <img src="clawdeen headband.png" id="clawdeen" class="main-image" alt="Clawdeen">
+      <div class="option-box" id="headbandOption" onclick="chooseHeadband()">
+        <img src="icon_concealer.png" alt="Headband option">
+      </div>
+    </div>
+
+    <a href="blush.html" id="next" class="next-btn">→</a>
+  </div>
+</body>
+</html>
