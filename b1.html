@@ -49,7 +49,7 @@
     .options {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
       margin-top: 20px;
     }
 
@@ -78,8 +78,8 @@
     .next-btn {
       background-color: #FFFACD;
       color: #663399;
-      padding: 10px 24px; /* smaller padding */
-      font-size: 20px;    /* smaller font size */
+      padding: 10px 24px;
+      font-size: 20px;
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       opacity: 0.5;
@@ -115,32 +115,23 @@
       const nextButton = document.getElementById("next");
       const title = document.getElementById("pageTitle");
 
-      // Change main image and title based on selected eyeshadow
       if(optionNumber === 1) {
         mainImage.src = "clawdeen_b1e1.png";
-        title.innerText = "Gore-geous! Lets add a colorful mascara!";
         nextButton.href = "b1e1.html";
-      } else if(optionNumber === 2) {
+      } 
+      else if(optionNumber === 2) {
         mainImage.src = "clawdeen_b1e2.png";
-        title.innerText = "Gore-geous! Lets add a colorful mascara!";
         nextButton.href = "b1e2.html";
-      } else if(optionNumber === 3) {
-        mainImage.src = "clawdeen_b1e3.png";
-        title.innerText = "Gore-geous! Lets add a colorful mascara!";
-        nextButton.href = "b1e3.html";
       }
 
-      // Highlight selected option and remove highlight from others
-      for(let i = 1; i <= 3; i++){
+      title.innerText = "Gore-geous! Let’s add a colorful mascara!";
+
+      // Highlight selected option
+      for(let i = 1; i <= 2; i++){
         const opt = document.getElementById("eyeshadowOption" + i);
-        if(i === optionNumber){
-          opt.classList.add("selected");
-        } else {
-          opt.classList.remove("selected");
-        }
+        opt.classList.toggle("selected", i === optionNumber);
       }
 
-      // Enable Next button
       nextButton.classList.add("active");
     }
   </script>
@@ -151,7 +142,6 @@
     <h1 id="pageTitle">Choose an eyeshadow color!</h1>
 
     <div class="flex-space">
-      <!-- Start with Clawdeen with selected blush1 -->
       <img src="clawdeen_b1.png" id="clawdeen" class="main-image" alt="Clawdeen">
 
       <div class="options">
@@ -160,9 +150,6 @@
         </div>
         <div class="option" id="eyeshadowOption2" onclick="chooseEyeshadow(2)">
           <img src="icon_eyeshadow2.png" alt="Eyeshadow 2">
-        </div>
-        <div class="option" id="eyeshadowOption3" onclick="chooseEyeshadow(3)">
-          <img src="icon_eyeshadow3.png" alt="Eyeshadow 3">
         </div>
       </div>
     </div>
