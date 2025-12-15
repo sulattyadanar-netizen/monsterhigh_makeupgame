@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final Look – Monster High Makeup Salon</title>
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('background.png');
+      background-position: center;
+      background-size: cover;
+      font-family: 'Bangers';
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFACD;
+    }
+
+    .content {
+      background-color: rgba(102, 51, 153, 0.85);
+      width: 90%;
+      max-width: 700px;
+      height: 90vh;
+      max-height: 650px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .main-image {
+      max-height: 100%;
+      max-width: 95%;
+      object-fit: contain;
+      margin: 0 auto;
+      filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
+    }
+    
+    .back-btn {
+      background-color: #FFFACD;
+      color: #663399;
+      padding: 10px 24px;
+      font-size: 20px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+    }
+
+    .restart-btn {
+      background-color: #FFFACD;
+      color: #663399;
+      padding: 12px 28px;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      align-self: center;
+    }
+
+    .restart-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>She's ready to party with her ghoulfriends!</h1>
+
+    <img src="clawdeen_b2e2m2L1h2.png" 
+         alt="Clawdeen Final Look" 
+         class="main-image">
+
+    <a href="javascript:history.back()" class="back-btn">←</a>
+    <a href="index.html" class="restart-btn">Start Again</a>
+  </div>
+</body>
+</html>
